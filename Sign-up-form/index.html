@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up form</title>
+    <link rel="icon" href="./contact-form.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="img"></section>
+      <section class="sign-up-form">
+        <div class="info">
+          <h3>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            <span>now </span> &nbsp; to get started.
+          </h3>
+          <h3>You <span>know </span> &nbsp; you want to.</h3>
+        </div>
+
+        <form action="#">
+          <div class="form-columns">
+            <div class="form left">
+              <h4 class="form-title">Let's do this!</h4>
+              <div class="input">
+                <label for="first-name"> First name </label>
+                <input type="text" id="first-name" required />
+              </div>
+
+              <div class="input">
+                <label for="last-name"> Last name </label>
+                <input type="text" id="last-name" required />
+              </div>
+
+              <div class="input">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+
+              <div class="input">
+                <label for="phone_number">phone number</label>
+                <input
+                  type="text"
+                  name="phone_number"
+                  id="phone_number"
+                  min="10"
+                  max="10"
+                  pattern="[0-9]"
+                  required
+                />
+              </div>
+
+              <div class="input">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+
+              <div class="input">
+                <label for="confirm_password">confirm password</label>
+                <input
+                  type="password"
+                  name="confirm_password"
+                  id="confirm_password"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Create Account</button>
+        </form>
+
+        <div class="login">
+          <p>Already have an account?</p>
+          <a href="#">Log in</a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
