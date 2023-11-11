@@ -1,7 +1,20 @@
 import styled from 'styled-components'
 import PersonalInfoForm from './FormComponents/PersonalInfoForm'
+import EducationInfoForm from './FormComponents/EducationInfoForm'
 
-const Form = ({ handlePersonalInfoChange, personalInfo, sections }) => {
+const Form = ({
+  handlePersonalInfoChange,
+  personalInfo,
+  sectionOpen,
+  sections,
+  handleSectionChange,
+  setOpen,
+  removeForm,
+  cancelForm,
+  toggleCollapsed,
+  toggleHidden,
+  createEducationForm,
+}) => {
   const { fullName, email, phoneNumber, address } = personalInfo
   return (
     <Wrapper>
@@ -11,6 +24,18 @@ const Form = ({ handlePersonalInfoChange, personalInfo, sections }) => {
         email={email}
         phoneNumber={phoneNumber}
         address={address}
+      />
+
+      <EducationInfoForm
+        educations={sections.educations}
+        isOpen={sectionOpen === 'Education'}
+        onChange={handleSectionChange}
+        createForm={createEducationForm}
+        setOpen={setOpen}
+        onCancel={cancelForm}
+        toggleCollapsed={toggleCollapsed}
+        onHide={toggleHidden}
+        onRemove={removeForm}
       />
     </Wrapper>
   )
